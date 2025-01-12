@@ -20,7 +20,8 @@
                 <span sec:authorize="hasRole('ROLE_ADMIN')">ADMIN</span>
                 <span sec:authorize="hasRole('ROLE_USER')">USER</span>
             </div>
-            <a class="text-decoration-none font-weight-bold text-secondary" th:href="@{/logout}">Logout</a>
+            <a class="text-decoration-none font-weight-bold text-secondary" th:href="@{/logout}"
+               th:method="POST">Logout</a>
         </div>
     </nav>
 </div>
