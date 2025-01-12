@@ -14,9 +14,10 @@
 <nav class="navbar navbar-dark bg-dark">
     <div class="container-fluid">
         <p class="navbar-brand text-white">
-            <b><span class="align-middle" th:text="${user.login}"></span></b>
-            <span class="align-middle">with roles:</span>
-            <span class="align-middle" th:text="${user.roles}"></span>
+            <b><span class="fw-bold" th:text="${#authentication.name}">USERNAME</span></b>
+            <span> with roles: </span>
+            <span sec:authorize="hasRole('ROLE_ADMIN')">ADMIN</span>
+            <span sec:authorize="hasRole('ROLE_USER')">USER</span>
         </p>
         <form th:action="@{/logout}" method="post">
             <button type="submit" class="btn btn-dark text-secondary">Logout</button>
@@ -52,21 +53,19 @@
                                     <th>Surname</th>
                                     <th>Age</th>
                                     <th>Email</th>
-                                    <th>Login</th>
                                     <th>Role</th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 <tr>
                                     <td th:text="${user.id}"></td>
-                                    <td th:text="${user.name}"></td>
-                                    <td th:text="${user.surname}"></td>
+                                    <td th:text="${user.firstName}"></td>
+                                    <td th:text="${user.lastName}"></td>
                                     <td th:text="${user.age}"></td>
                                     <td th:text="${user.email}"></td>
-                                    <td th:text="${user.login}"></td>
                                     <td>
                                         <th:block th:each="role: ${user.roles}"
-                                                  th:text="${role.userRole} + ' '">
+                                                  th:text="${role.name} + ' '">
                                         </th:block>
                                     </td>
                                 </tr>

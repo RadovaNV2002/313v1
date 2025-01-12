@@ -5,7 +5,6 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import ru.alexeykedr.springbootbootstrap.model.Role;
 import ru.alexeykedr.springbootbootstrap.model.User;
-
 import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
