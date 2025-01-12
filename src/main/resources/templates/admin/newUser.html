@@ -17,10 +17,8 @@
             <span class="align-middle">with roles:</span>
             <span class="align-middle" th:text="${user.roles}"></span>
         </p>
-        <form th:action="@{/logout}" method="post">
-            <button type="submit" class="btn btn-dark text-secondary">Logout</button>
-        </form>
     </div>
+    <a class="text-decoration-none font-weight-bold text-secondary" th:href="@{/logout}">Logout</a>
 </nav>
 
 <section>

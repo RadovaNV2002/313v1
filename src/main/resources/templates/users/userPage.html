@@ -15,13 +15,10 @@
     <div class="container-fluid">
         <p class="navbar-brand text-white">
             <b><span class="fw-bold" th:text="${#authentication.name}">USERNAME</span></b>
-            <span> with roles: </span>
-            <span sec:authorize="hasRole('ROLE_ADMIN')">ADMIN</span>
-            <span sec:authorize="hasRole('ROLE_USER')">USER</span>
+            <span class="align-middle">with roles:</span>
+            <span class="align-middle" th:text="${user.roles}"></span>
         </p>
-        <form th:action="@{/logout}" method="post">
-            <button type="submit" class="btn btn-dark text-secondary">Logout</button>
-        </form>
+        <a class="text-decoration-none font-weight-bold text-secondary" th:href="@{/logout}">Logout</a>
     </div>
 </nav>
 <div class="container-fluid h-100">
@@ -29,10 +26,8 @@
 
         <div class="p-0 col-2">
             <div class="nav flex-column nav-pills pt-4" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                <a class="nav-link" href="/admin" sec:authorize="hasAuthority('ADMIN')" role="tab"
-                   aria-controls="v-pills-home" aria-selected="true">Admin</a>
-                <a class="nav-link active" href="/user" sec:authorize="(hasAnyAuthority('ADMIN', 'USER'))" role="tab"
-                   aria-controls="v-pills-profile" aria-selected="false">User</a>
+                <a sec:authorize="hasRole('ROLE_ADMIN')"  th:href="@{/admin}" class="nav-link" aria-selected="false">Admin</a>
+                <a class="nav-item nav-link active" aria-controls="v-pills-home" aria-selected="true">User</a>
             </div>
         </div>
 
