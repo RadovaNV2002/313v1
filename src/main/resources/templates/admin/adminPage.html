@@ -91,9 +91,14 @@
                                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                                 aria-label="Close"></button>
                                                     </div>
-                                                    <form th:action="@{/update/{id}(id=${user.id})}"
+                                                    <form th:action="@{/edit/{id}(id=${user.id})}"
                                                           th:object="${user}" th:method="PATCH">
                                                         <div class="modal-body col-md text-center">
+                                                            <br>
+                                                            <label for="username0"><b>Username</b></label>
+                                                            <input th:name="username" th:type="text"
+                                                                   class="form-control" id="username0"
+                                                                   th:value="${user.username}"/>
                                                             <br>
                                                             <label for="name0"><b>Name</b></label>
                                                             <input th:name="firstName" th:type="text"

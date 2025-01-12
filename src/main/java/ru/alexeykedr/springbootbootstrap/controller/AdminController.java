@@ -64,7 +64,7 @@ public class AdminController {
         return "edit";
     }
 
-    @PatchMapping("/update/{id}")
+    @PatchMapping("/edit/{id}")
     public String updateUser(@ModelAttribute("user") User user,@RequestParam("selectedRole") Collection<Role> selectedRole) {
         user.setRoles(selectedRole);
         userService.updateUser(user);
