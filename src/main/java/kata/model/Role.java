@@ -1,4 +1,4 @@
-package ru.alexeykedr.springbootbootstrap.model;
+package kata.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

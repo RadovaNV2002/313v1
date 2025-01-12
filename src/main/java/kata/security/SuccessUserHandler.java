@@ -1,4 +1,4 @@
-package ru.alexeykedr.springbootbootstrap.security;
+package kata.security;
 
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.authority.AuthorityUtils;

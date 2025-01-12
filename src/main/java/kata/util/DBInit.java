@@ -1,12 +1,12 @@
-package ru.alexeykedr.springbootbootstrap.util;
+package kata.util;
 
-import ru.alexeykedr.springbootbootstrap.repository.RoleRepository;
-import ru.alexeykedr.springbootbootstrap.repository.UserRepository;
-import ru.alexeykedr.springbootbootstrap.model.Role;
-import ru.alexeykedr.springbootbootstrap.model.User;
+import kata.model.Role;
+import kata.model.User;
+import kata.repository.RoleRepository;
+import kata.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import ru.alexeykedr.springbootbootstrap.service.UserServiceImpl;
+import kata.service.UserServiceImpl;
 
 import javax.annotation.PostConstruct;
 import java.util.List;

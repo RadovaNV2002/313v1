@@ -1,20 +1,19 @@
-package ru.alexeykedr.springbootbootstrap.controller;
+package kata.controller;
 
+import kata.model.Role;
+import kata.model.User;
+import kata.service.RoleService;
+import kata.service.UserService;
+import kata.valid.UserValidator;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
-import ru.alexeykedr.springbootbootstrap.model.Role;
-import ru.alexeykedr.springbootbootstrap.model.User;
-import ru.alexeykedr.springbootbootstrap.service.RoleService;
-import ru.alexeykedr.springbootbootstrap.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import ru.alexeykedr.springbootbootstrap.valid.UserValidator;
 
 import javax.validation.Valid;
 import java.util.Collection;
-import java.util.stream.Collectors;
 
 @Controller
 @RequestMapping

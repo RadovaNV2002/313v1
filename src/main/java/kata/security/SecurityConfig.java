@@ -1,4 +1,4 @@
-package ru.alexeykedr.springbootbootstrap.security;
+package kata.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -9,7 +9,7 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import ru.alexeykedr.springbootbootstrap.service.UserServiceImpl;
+import kata.service.UserServiceImpl;
 
 @Configuration
 @EnableWebSecurity

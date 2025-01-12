@@ -1,10 +1,10 @@
-package ru.alexeykedr.springbootbootstrap.service;
+package kata.service;
 
+import kata.model.Role;
+import kata.model.User;
+import kata.repository.UserRepository;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
-import ru.alexeykedr.springbootbootstrap.repository.UserRepository;
-import ru.alexeykedr.springbootbootstrap.model.Role;
-import ru.alexeykedr.springbootbootstrap.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.security.core.userdetails.UserDetails;

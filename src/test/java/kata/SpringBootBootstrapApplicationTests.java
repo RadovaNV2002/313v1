@@ -1,4 +1,4 @@
-package ru.alexeykedr.springbootbootstrap;
+package kata;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

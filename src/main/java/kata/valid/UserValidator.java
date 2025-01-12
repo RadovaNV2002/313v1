@@ -1,12 +1,12 @@
-package ru.alexeykedr.springbootbootstrap.valid;
+package kata.valid;
 
+import kata.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
-import ru.alexeykedr.springbootbootstrap.model.User;
-import ru.alexeykedr.springbootbootstrap.service.UserServiceImpl;
+import kata.service.UserServiceImpl;
 
 @Component
 public class UserValidator implements Validator {

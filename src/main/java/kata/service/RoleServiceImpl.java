@@ -1,7 +1,7 @@
-package ru.alexeykedr.springbootbootstrap.service;
+package kata.service;
 
-import ru.alexeykedr.springbootbootstrap.repository.RoleRepository;
-import ru.alexeykedr.springbootbootstrap.model.Role;
+import kata.model.Role;
+import kata.repository.RoleRepository;
 import org.springframework.stereotype.Service;
 import java.util.List;
 
