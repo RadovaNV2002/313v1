@@ -2,7 +2,7 @@ package ru.alexeykedr.springbootbootstrap.service;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
-import ru.alexeykedr.springbootbootstrap.dao.UserRepository;
+import ru.alexeykedr.springbootbootstrap.repository.UserRepository;
 import ru.alexeykedr.springbootbootstrap.model.Role;
 import ru.alexeykedr.springbootbootstrap.model.User;
 import org.springframework.beans.factory.annotation.Autowired;

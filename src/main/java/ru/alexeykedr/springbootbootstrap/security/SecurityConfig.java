@@ -19,7 +19,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
     public SecurityConfig(SuccessUserHandler successUserHandler,
-                             @Lazy UserServiceImpl userService) {
+                          @Lazy UserServiceImpl userService) {
         this.successUserHandler = successUserHandler;
         this.userService = userService;
     }

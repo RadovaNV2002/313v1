@@ -1,19 +1,15 @@
 package ru.alexeykedr.springbootbootstrap.util;
 
-import ru.alexeykedr.springbootbootstrap.dao.RoleRepository;
-import ru.alexeykedr.springbootbootstrap.dao.UserRepository;
+import ru.alexeykedr.springbootbootstrap.repository.RoleRepository;
+import ru.alexeykedr.springbootbootstrap.repository.UserRepository;
 import ru.alexeykedr.springbootbootstrap.model.Role;
-import ru.alexeykedr.springbootbootstrap.service.UserService;
 import ru.alexeykedr.springbootbootstrap.model.User;
-import ru.alexeykedr.springbootbootstrap.service.RoleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import ru.alexeykedr.springbootbootstrap.service.UserServiceImpl;
 
 import javax.annotation.PostConstruct;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 @Component
 public class DBInit {
@@ -23,8 +19,8 @@ public class DBInit {
 
     @Autowired
     public DBInit(RoleRepository roleRepository,
-                           UserRepository userRepository,
-                           UserServiceImpl userService) {
+                  UserRepository userRepository,
+                  UserServiceImpl userService) {
         this.roleRepository = roleRepository;
         this.userRepository = userRepository;
         this.userService = userService;

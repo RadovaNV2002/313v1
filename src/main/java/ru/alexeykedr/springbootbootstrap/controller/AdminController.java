@@ -32,7 +32,7 @@ public class AdminController {
     }
 
     @GetMapping("/admin")
-    public String showAdminPage(@AuthenticationPrincipal User user,Model model) {
+    public String showAdminPage(@AuthenticationPrincipal User user, Model model) {
         model.addAttribute("user", user);
         model.addAttribute("allUsers", userService.getAllUsers());
         model.addAttribute("roles", roleService.getAllRoles());
@@ -65,7 +65,7 @@ public class AdminController {
     }
 
     @PatchMapping("/edit/{id}")
-    public String updateUser(@ModelAttribute("user") User user,@RequestParam("selectedRole") Collection<Role> selectedRole) {
+    public String updateUser(@ModelAttribute("user") User user, @RequestParam("selectedRole") Collection<Role> selectedRole) {
         user.setRoles(selectedRole);
         userService.updateUser(user);
         return "redirect:/admin";
